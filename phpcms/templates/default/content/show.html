@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-compatible"  content="IE=edge">
+
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+
+	<title>MP2工作室 {$title}</title>
+
+	<link type="text/css" rel="stylesheet" href="{CSS_PATH}mp2/reset.css">
+
+	<link type="text/css" rel="stylesheet" href="{CSS_PATH}mp2/common.css">
+
+	<link type="text/css" rel="stylesheet" href="{CSS_PATH}mp2/index.css">
+
+	<link type="text/css" rel="stylesheet" href="{CSS_PATH}mp2/photo.css">
+
+	<link type="text/css" rel="stylesheet" href="{CSS_PATH}mp2/about.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="{IMG_PATH}mp2/favicon.ico" />
+
+	<style>
+
+		/*修改百度分享自带的图标*/
+
+		#share a{
+
+			width: 45px;
+
+			height: 45px;
+
+			padding: 0;
+
+			/*margin: 6px;*/
+
+		}
+
+
+
+		#share a.bds_weixin{
+
+			
+
+			width: 27px;
+
+			height: 21px;
+
+			margin: 0;
+
+			background-position: 0 0;
+
+			background-image: url('{IMG_PATH}mp2/wechat.png');
+
+		}
+
+
+
+		
+
+		#share a.bds_tsina{
+
+
+
+			width: 27px;
+
+			height: 21px;
+
+			margin: 0 0 0 11px;
+
+			background-position: 0 0;
+
+			background-image: url('{IMG_PATH}mp2/weibo.png');
+
+		}
+
+
+
+		@media (max-width: 1000px){
+
+			#share a{
+
+				width: 37px;
+
+				height: 37px;
+
+				padding: 0;
+
+				margin: 6px;
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 37px;
+
+				height: 29px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/wechat-1000.png');
+
+			}
+
+
+
+			
+
+			#share a.bds_tsina{
+
+
+
+				width: 37px;
+
+				height: 29px;
+
+				margin: 0 0 0 18px;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/weibo-1000.png');
+
+			}
+
+		}
+
+
+
+		@media (max-width: 800px){
+
+			#share a{
+
+				width: 28px;
+
+				height: 28px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 28px;
+
+				height: 22px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/wechat-800.png');
+
+			}
+
+
+
+			
+
+			#share a.bds_tsina{
+
+
+
+				width: 28px;
+
+				height: 22px;
+
+				margin: 0 0 0 14px;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/weibo-800.png');
+
+			}
+
+		}
+
+
+
+
+
+
+
+		@media (max-width: 600px){
+
+			#share a{
+
+				width: 25px;
+
+				height: 25px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 25px;
+
+				height: 20px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/wechat-600.png');
+
+			}
+
+
+
+			
+
+			#share a.bds_tsina{
+
+
+
+				width: 25px;
+
+				height: 20px;
+
+				margin: 0 0 0 12px;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/weibo-600.png');
+
+			}
+
+		}
+
+
+
+		@media (max-width: 400px){
+
+			#share a{
+
+				width: 15px;
+
+				height: 15px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 15px;
+
+				height: 12px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/wechat-400.png');
+
+			}
+
+
+
+			
+
+			#share a.bds_tsina{
+
+
+
+				width: 15px;
+
+				height: 12px;
+
+				margin: 0 0 0 7px;
+
+				background-position: 0 0;
+
+				background-image: url('{IMG_PATH}mp2/weibo-400.png');
+
+			}
+
+		}
+
+
+
+
+
+
+
+	</style>
+
+
+
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+
+
+
+	<script type="text/javascript" src="{JS_PATH}mp2/mp2.js"></script>
+
+
+
+</head>
+
+<body>
+
+	<div class="public-header public-container">
+
+		
+
+		<div class="header-logo">
+
+			<a href="{WEB_PATH}"><img src="{IMG_PATH}mp2/mp2-logo.jpg" alt=""></a>
+
+		</div>
+
+		<div class="nav">
+
+			<ul class="header-nav clearfolat">
+
+
+
+				<li class="video">
+
+					<a href="{WEB_PATH}" class="video-a"><img class="video-pic" src="{IMG_PATH}mp2/nav-video.png" alt="" ><span class="bar-yellow" style="display: block;"></span></a>
+
+				</li>
+
+				
+
+				<li class="photo">
+
+					<a href="{WEB_PATH}" class="photo-a"><img class="photo-pic" src="{IMG_PATH}mp2/nav-photo.png" alt="" ><span class="bar-yellow" style="display: none;"></a>
+
+				</li>
+
+				
+
+				<li class="about"> 
+
+					<a href="{WEB_PATH}" class="about-a"><img class="about-pic" src="{IMG_PATH}mp2/nav-about.png" alt="" ><span class="bar-yellow" style="display: none;"></a>
+
+				</li>
+
+			</ul> 
+
+		</div>
+
+		
+
+		<div class="header-nav-bar public-container">
+
+			<span class="bar-gray"></span>
+
+			
+
+		</div>
+
+	</div>
+
+	
+
+
+
+	<div class="index-body public-container" style="display: block;">
+
+
+
+		
+
+		<div class="item"> 
+
+			
+
+			
+
+			<div class="video-pic video-address">
+
+				<div id="image-cover-{$id}">
+
+					
+
+					{loop $pictureurls $pic_k $r}
+
+					<img src="{$r[url]}" alt="">
+
+					{/loop}
+
+				</div>
+
+				
+
+				
+
+				<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,{$id},'{$content_sid}')">
+
+					<div class="play-button1"><img src="{IMG_PATH}mp2/video-play-border.png" alt=""></div>
+
+					<div class="play-button2"><img src="{IMG_PATH}mp2/video-play.png" alt=""></div>
+
+				</div>
+
+
+
+				<div class="video-{$id}" id="video-{$id}" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				
+
+			</div>
+
+
+
+			<div class="video-title">
+
+				<h3>
+
+					{$title}
+
+				</h3>
+
+				
+
+			</div>
+
+			<div class="video-author">
+
+				<h4>制片:{$producer}/导演:{$director}/摄影:{$photographer}/后期:{$post_production}</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+					<div class="bdsharebuttonbox">
+
+						<a href="#" value1="{$title}"  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+						<a href="#" value1="{$title}" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+					</div>
+
+					
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+			<div class="content">
+
+				{$content}
+
+			</div>
+
+
+
+			<div class="video-share content-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+					<div class="bdsharebuttonbox">
+
+						
+
+						<a href="#" style="margin-left: 44%;" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+						<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+
+					</div>
+				</div>
+
+			</div>
+
+			<div class="content-foot">
+
+				<p>
+
+					MP2版权所有，未经授权不得转载使用
+
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script>
+
+         //插件的配置部分，注意要记得设置onBeforeClick事件，主要用于获取动态的文章url
+         window._bd_share_config = {
+         	"common": {
+         		"bdSnsKey":{},"bdMini":"2"
+         		,"bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"
+         	}, "share": {}
+         };
+
+         with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+     </script>
+
+     
+
+     

@@ -1,0 +1,299 @@
+
+html{
+	font-size: 100px;
+}
+
+.public-container{
+	position: relative;
+	margin: 0rem auto;
+	/*width: 1104px;*/
+	/*width: 11.04rem;*/
+	width: 600px;
+}
+
+@media (max-width: 1000px){
+	.public-container{
+		width: 89%;
+	}
+}
+
+.public-header{
+	/*height: 462px;*/
+
+	/*height: 4.62rem;*/
+}
+
+.public-header .nav{
+	margin-top: 0.68rem;
+	margin-left:1.26811594202899%;
+}
+
+@media (max-width: 1000px) {
+	.public-header .nav{
+		margin-top: 0.58rem;
+		
+	}
+}
+
+@media (max-width: 800px) {
+	.public-header .nav{
+		margin-top: 0.50rem;
+		
+	}
+}
+
+@media (max-width: 600px) {
+	.public-header .nav{
+		margin-top: 0.40rem;
+		
+	}
+}
+
+@media (max-width: 400px) {
+	.public-header .nav{
+		margin-top: 0.32rem;
+		
+	}
+}
+
+
+
+
+
+.public-header .header-logo{
+
+	/*width: 298px;*/
+	/*height: 218px;*/
+	width: 26.9927536231884%;
+	/*height: 2.18rem;*/
+	margin: 0.81rem auto 0;
+}
+
+@media (max-width: 1000px) {
+	.public-header .header-logo{
+		margin: 0.64rem auto 0;
+	}
+}
+
+@media (max-width: 800px) {
+	.public-header .header-logo{
+		margin: 0.48rem auto 0;
+	}
+}
+
+@media (max-width: 600px) {
+	.public-header .header-logo{
+		margin: 0.32rem auto 0;
+	}
+}
+
+@media (max-width: 400px) {
+	.public-header .header-logo{
+		margin: 0.16rem auto 0;
+	}
+}
+
+.public-header .header-logo img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.public-header .header-nav{
+	/*margin:9.2rem 0 0 1rem;*/
+	margin:0rem auto;
+	/*font-size: 40px;*/
+	font-size: 0.4rem;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.public-header .header-nav li{
+	float: left;
+	display: inline-block;
+}
+
+.public-header .header-nav li:first-child{
+	width: 22.6449275362319%;
+	/*width: calc(33.33333% - 3rem);*/
+	
+}
+
+.public-header .header-nav li:nth-child(2){
+	width:23.4601449275362%;
+	/*width: calc(33.33333% - 3rem);*/
+	
+}
+
+.public-header .header-nav li:nth-child(3){
+	width:24.0036231884058%;
+	/*width: calc(33.33333% - 3rem);*/
+	
+}
+
+
+.public-header .header-nav li+li{
+	margin-left: 12.7717391304348%;
+}
+
+/*.public-header .header-nav li:last-child{
+	margin-right: 0;
+}*/
+
+.public-header .header-nav .video .video-pic{
+	/*width: 250px;*/
+	/*width:2.5rem;*/
+	/*height: 41px;*/
+	/*height: 0.41rem;*/
+	display: block;
+	margin:0 auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.public-header .header-nav .video a{
+	/*width: 250px;*/
+	width: 100%;
+	/*height: 41px;*/
+
+}
+
+.public-header .header-nav .photo .photo-pic{
+	/*width: 259px;*/
+	/*width: 2.59rem;*/
+	/*height: 41px;*/
+	/*height: 0.41rem;*/
+	/*background: url("../images/nav-photo.png") no-repeat;*/
+
+	display: block;
+	margin:0 auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.public-header .header-nav .photo a{
+	/*width: 259px;*/
+	/*width: 2.59rem;*/
+	width: 100%;
+	/*height: 41px;*/
+	
+}
+
+.public-header .header-nav .about .about-pic{
+	/*width: 265px;*/
+	/*width: 2.65rem;*/
+	/*height: 41px;*/
+	/*height: 0.41rem;*/
+	/*background: url("../images/nav-about.png") no-repeat;*/
+
+	display: block;
+	margin:0 auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.public-header .header-nav .about a{
+	/*width: 265px;*/
+	/*width: 2.65rem;*/
+	width: 100%;
+	/*height: 41px;*/
+
+	
+}
+
+.public-header .header-nav-bar{
+	/*margin:22px 0 0 0;*/
+	margin:0.22rem 0 0 0;
+	/*height: 9px;*/
+
+	height: 0.04rem;
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+}
+
+.public-header .header-nav-bar .bar-gray{
+	position: absolute;
+	/*bottom: 2px;*/
+	bottom: 0.02rem;
+	/*height: 4px;*/
+	height: 0.03rem;
+	/*width: 1104px;*/
+	/*width: 11.04rem;*/
+	width: 100%;
+	max-width: 100%;
+	background-color: #b5b5b5;
+	z-index: -1;
+}
+
+/*.public-header .header-nav-bar .bar-yellow{
+	position: absolute;
+	
+	height: 0.09rem;
+	
+	width: 33.3333333333%;
+	background-color: #ffd800;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*更改导航条样式*/
+
+.public-header .nav li .video-a .bar-yellow{
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	
+	height: 0.07rem;
+	
+	width: 33.3333333333%;
+	background-color: #ffd800;
+}
+
+.public-header .nav li .photo-a .bar-yellow{
+	display: none;
+	left: 33.3333333333%;
+	bottom: 0;
+	position: absolute;
+	
+	height: 0.07rem;
+	
+	width: 33.3333333333%;
+	background-color: #ffd800;
+}
+
+.public-header .nav li .about-a .bar-yellow{
+	display: none;
+		left: 66.666666666%;
+	bottom: 0;
+	position: absolute;
+	
+	height: 0.07rem;
+	
+	width: 33.3333333333%;
+	background-color: #ffd800;
+}
+
+
+.gray { 
+-webkit-filter: grayscale(100%); 
+-moz-filter: grayscale(100%); 
+-ms-filter: grayscale(100%); 
+-o-filter: grayscale(100%); 
+filter: grayscale(100%); 
+filter: gray; 
+} 
+

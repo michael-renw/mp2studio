@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+
+	<meta http-equiv="X-UA-compatible"  content="IE=edge">
+
+	<meta name="viewport" content="width=device-width" initial-scale="1">
+
+	<title>MP2工作室</title>
+
+	<link type="text/css" rel="stylesheet" href="http://192.168.1.105/mp2studio/statics/css/mp2/reset.css">
+
+	<link type="text/css" rel="stylesheet" href="http://192.168.1.105/mp2studio/statics/css/mp2/common.css">
+
+	<link type="text/css" rel="stylesheet" href="http://192.168.1.105/mp2studio/statics/css/mp2/index.css">
+
+	<link type="text/css" rel="stylesheet" href="http://192.168.1.105/mp2studio/statics/css/mp2/photo.css">
+
+	<link type="text/css" rel="stylesheet" href="http://192.168.1.105/mp2studio/statics/css/mp2/about.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="http://192.168.1.105/mp2studio/statics/images/mp2/favicon.ico" />
+
+	<style>
+
+				/*修改百度分享自带的图标*/
+
+#share a{
+
+				width: 45px;
+
+				height: 45px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 27px;
+
+				height: 21px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/wechat.png');
+
+			}
+
+
+
+		
+
+			#share a.bds_tsina{
+
+
+
+				width: 27px;
+
+				height: 21px;
+
+				margin: 0 0 0 11px;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/weibo.png');
+
+			}
+
+
+
+@media (max-width: 1000px){
+
+			#share a{
+
+				width: 37px;
+
+				height: 37px;
+
+				padding: 0;
+
+				margin: 6px;
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 37px;
+
+				height: 29px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/wechat-1000.png');
+
+			}
+
+
+
+		
+
+			#share a.bds_tsina{
+
+
+
+				width: 37px;
+
+				height: 29px;
+
+				margin: 0 0 0 18px;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/weibo-1000.png');
+
+			}
+
+}
+
+
+
+@media (max-width: 800px){
+
+				#share a{
+
+				width: 28px;
+
+				height: 28px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				
+
+				width: 28px;
+
+				height: 22px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/wechat-800.png');
+
+			}
+
+
+
+		
+
+			#share a.bds_tsina{
+
+
+
+				width: 28px;
+
+				height: 22px;
+
+				margin: 0 0 0 14px;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/weibo-800.png');
+
+			}
+
+}
+
+
+
+
+
+
+
+@media (max-width: 600px){
+
+			#share a{
+
+				width: 25px;
+
+				height: 25px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+
+
+			#share a.bds_weixin{
+
+				width: 25px;
+
+				height: 20px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/wechat-600.png');
+
+			}
+
+			#share a.bds_tsina{
+
+				width: 25px;
+
+				height: 20px;
+
+				margin: 0 0 0 12px;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/weibo-600.png');
+
+			}
+
+}
+
+@media (max-width: 400px){
+
+			#share a{
+
+				width: 15px;
+
+				height: 15px;
+
+				padding: 0;
+
+				/*margin: 6px;*/
+
+			}
+
+			#share a.bds_weixin{
+
+				
+
+				width: 15px;
+
+				height: 12px;
+
+				margin: 0;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/wechat-400.png');
+
+			}
+
+
+			#share a.bds_tsina{
+
+
+
+				width: 15px;
+
+				height: 12px;
+
+				margin: 0 0 0 7px;
+
+				background-position: 0 0;
+
+				background-image: url('http://192.168.1.105/mp2studio/statics/images/mp2/weibo-400.png');
+
+			}
+
+}
+
+@media (min-width: 1000px){
+	#btn {width:40px; height:40px; position:fixed; right:265px; bottom:60px; display:none;
+		 background:url('http://192.168.1.105/mp2studio/statics/images/mp2/top_bg.png') no-repeat left top;}	
+#btn:hover {background:url('http://192.168.1.105/mp2studio/statics/images/mp2/top_bg.png') no-repeat 0 -39px;}
+.bg {width:1190px; margin:0 auto;}
+}
+
+
+	</style>
+
+
+
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+
+
+
+	<script type="text/javascript" src="http://192.168.1.105/mp2studio/statics/js/mp2/mp2.js"></script>
+
+
+
+</head>
+
+<body>
+
+	<div class="public-header public-container">
+
+		
+
+			<div class="header-logo">
+
+				<a href="/mp2studio/"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/mp2-logo.jpg" alt=""></a>
+
+			</div>
+
+			<div class="nav">
+
+				<ul class="header-nav clearfolat">
+
+
+
+					<li class="video">
+
+						 <a href="#" class="video-a"><img class="video-pic" src="http://192.168.1.105/mp2studio/statics/images/mp2/nav-video.png" alt="" ><span class="bar-yellow" style="display: block;"></span></a>
+
+					</li>
+
+					
+
+					<li class="photo">
+
+					 	<a href="#" class="photo-a"><img class="photo-pic" src="http://192.168.1.105/mp2studio/statics/images/mp2/nav-photo.png" alt="" ><span class="bar-yellow" style="display: none;"></a>
+
+					 </li>
+
+					
+
+					<li class="about"> 
+
+						<a href="#" class="about-a"><img class="about-pic" src="http://192.168.1.105/mp2studio/statics/images/mp2/nav-about.png" alt="" ><span class="bar-yellow" style="display: none;"></a>
+
+					</li>
+
+				</ul> 
+
+			</div>
+
+	
+
+		<div class="header-nav-bar public-container">
+
+			<span class="bar-gray"></span>
+
+			
+
+		</div>
+
+	</div>
+
+
+<!-- main -->
+	<a href="javascript:;" id="btn" title="回到顶部"></a>
+	<div class="index-body public-container" style="display: block;">
+
+		  
+				
+
+			 
+		<div class="item"> 
+
+			
+
+			
+
+				<div class="video-pic video-address">
+
+					<div id="image-cover-21">
+
+						<img src="http://192.168.1.105/mp2studio/uploadfile/2017/0112/20170112121320510.jpg" alt="">
+
+					</div>
+
+
+					<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,21,'')">
+
+						<div class="play-button1"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png" alt=""></div>
+
+						<div class="play-button2"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png" alt=""></div>
+
+					</div>
+
+					<div class="video-21" id="video-21" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				</div>
+
+			<div class="video-title">
+
+				<a href=http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=21>
+				<h3>
+				aisd\'s jf
+				</h3>
+				</a>
+
+			</div>
+
+			
+
+			<div class="video-author">
+
+				<h4>制片:asdfasd/导演:asdfasdf/摄影:asdfasdf/后期:asdfasdf</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+						<div class="bdsharebuttonbox">
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=21" value2='aisd\'s jf'  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=21" value2='aisd\'s jf'  class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+						</div>
+
+			
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+		</div>
+
+			 
+		<div class="item"> 
+
+			
+
+			
+
+				<div class="video-pic video-address">
+
+					<div id="image-cover-20">
+
+						<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230104822837.jpg" alt="">
+
+					</div>
+
+
+					<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,20,'adfewr')">
+
+						<div class="play-button1"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png" alt=""></div>
+
+						<div class="play-button2"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png" alt=""></div>
+
+					</div>
+
+					<div class="video-20" id="video-20" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				</div>
+
+			<div class="video-title">
+
+				<a href=http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=20>
+				<h3>
+				testnew
+				</h3>
+				</a>
+
+			</div>
+
+			
+
+			<div class="video-author">
+
+				<h4>制片:ads/导演:ds/摄影:sdf/后期:sdf</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+						<div class="bdsharebuttonbox">
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=20" value2='testnew'  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=20" value2='testnew'  class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+						</div>
+
+			
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+		</div>
+
+			 
+		<div class="item"> 
+
+			
+
+			
+
+				<div class="video-pic video-address">
+
+					<div id="image-cover-19">
+
+						<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230104430470.jpg" alt="">
+
+					</div>
+
+
+					<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,19,'XODc4NjU1NjA0')">
+
+						<div class="play-button1"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png" alt=""></div>
+
+						<div class="play-button2"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png" alt=""></div>
+
+					</div>
+
+					<div class="video-19" id="video-19" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				</div>
+
+			<div class="video-title">
+
+				<a href=http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=19>
+				<h3>
+				极限运动久“cheers”
+				</h3>
+				</a>
+
+			</div>
+
+			
+
+			<div class="video-author">
+
+				<h4>制片:pm工作室/导演:小巴/摄影:大白,天天,刘妍/后期:IN大白</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+						<div class="bdsharebuttonbox">
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=19" value2='极限运动久“cheers”'  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=19" value2='极限运动久“cheers”'  class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+						</div>
+
+			
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+		</div>
+
+			 
+		<div class="item"> 
+
+			
+
+			
+
+				<div class="video-pic video-address">
+
+					<div id="image-cover-18">
+
+						<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230103839836.jpg" alt="">
+
+					</div>
+
+
+					<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,18,'XODc4NjU1NjA0')">
+
+						<div class="play-button1"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png" alt=""></div>
+
+						<div class="play-button2"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png" alt=""></div>
+
+					</div>
+
+					<div class="video-18" id="video-18" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				</div>
+
+			<div class="video-title">
+
+				<a href=http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=18>
+				<h3>
+				极限运动八"cheers"
+				</h3>
+				</a>
+
+			</div>
+
+			
+
+			<div class="video-author">
+
+				<h4>制片:制片/导演:导演/摄影:摄像/后期:</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+						<div class="bdsharebuttonbox">
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=18" value2='极限运动八"cheers"'  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+							<a href="#" value1="http://192.168.1.105/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=18" value2='极限运动八"cheers"'  class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+						</div>
+
+			
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+		</div>
+
+			 
+		<div class="item"> 
+
+			
+
+			
+
+				<div class="video-pic video-address">
+
+					<div id="image-cover-17">
+
+						<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230104213255.jpg" alt="">
+
+					</div>
+
+
+					<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,17,'XODc4NjU1NjA0')">
+
+						<div class="play-button1"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png" alt=""></div>
+
+						<div class="play-button2"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png" alt=""></div>
+
+					</div>
+
+					<div class="video-17" id="video-17" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				</div>
+
+			<div class="video-title">
+
+				<a href=http://127.0.0.1/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=17>
+				<h3>
+				极限运动七
+				</h3>
+				</a>
+
+			</div>
+
+			
+
+			<div class="video-author">
+
+				<h4>制片:纸片人/导演:导演着/摄影:摄像辙/后期:</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+						<div class="bdsharebuttonbox">
+
+							<a href="#" value1="http://127.0.0.1/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=17" value2='极限运动七'  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+							<a href="#" value1="http://127.0.0.1/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=17" value2='极限运动七'  class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+						</div>
+
+			
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+		</div>
+
+			 
+		<div class="item"> 
+
+			
+
+			
+
+				<div class="video-pic video-address">
+
+					<div id="image-cover-16">
+
+						<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230104024382.jpg" alt="">
+
+					</div>
+
+
+					<div class="play-button" style="cursor: pointer;" onclick="playVideo(this,16,'XNTU0NjU3Mjgw')">
+
+						<div class="play-button1"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png" alt=""></div>
+
+						<div class="play-button2"><img src="http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png" alt=""></div>
+
+					</div>
+
+					<div class="video-16" id="video-16" style="width: 100%;max-width: 100%;display:none;"></div>
+
+				</div>
+
+			<div class="video-title">
+
+				<a href=http://127.0.0.1/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=16>
+				<h3>
+				极限运动六
+				</h3>
+				</a>
+
+			</div>
+
+			
+
+			<div class="video-author">
+
+				<h4>制片:制片人/导演:导演/摄影:摄像辙/后期:</h4>
+
+			</div>
+
+			
+
+			<div class="video-share clearfloat">
+
+				
+
+				
+
+				<div id="share">
+
+						<div class="bdsharebuttonbox">
+
+							<a href="#" value1="http://127.0.0.1/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=16" value2='极限运动六'  class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+
+							<a href="#" value1="http://127.0.0.1/mp2studio/index.php?m=content&c=index&a=show&catid=17&id=16" value2='极限运动六'  class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+
+						</div>
+
+			
+
+				</div>
+
+			</div>
+
+			
+
+			<span class="index-line"></span>
+
+		</div>
+
+			 
+			<div class="index-more-item">
+
+				
+
+				<p class="text-more">
+
+					<i class="line line-l"></i>
+
+				<a  class="more" value="0" href="javascript:;">更多</a>
+
+					<i class="line line-r"></i>
+
+				</p>
+
+			</div>
+
+			
+	</div>
+
+	<!-- photo body部分 -->
+
+	<div class="photo-body public-container" style="display: none;">
+
+		
+			
+		<div class="item">
+
+			<div class="photo-pic">
+
+				<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230104430470.jpg" alt="">
+
+			</div>
+
+			<div class="photo-title">
+
+				<h3>ss</h3>
+
+			</div>
+
+			<div class="photo-author">
+
+				<h4>摄影：ss</h4>
+
+			</div>
+
+			<span class="photo-line"></span>
+
+		</div>
+
+
+
+		
+		<div class="item">
+
+			<div class="photo-pic">
+
+				<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1120/20161120041948995.jpg" alt="">
+
+			</div>
+
+			<div class="photo-title">
+
+				<h3>ss</h3>
+
+			</div>
+
+			<div class="photo-author">
+
+				<h4>摄影：sss</h4>
+
+			</div>
+
+			<span class="photo-line"></span>
+
+		</div>
+
+
+
+		
+		<div class="item">
+
+			<div class="photo-pic">
+
+				<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1120/20161120051120554.jpg" alt="">
+
+			</div>
+
+			<div class="photo-title">
+
+				<h3>ss</h3>
+
+			</div>
+
+			<div class="photo-author">
+
+				<h4>摄影：ss</h4>
+
+			</div>
+
+			<span class="photo-line"></span>
+
+		</div>
+
+
+
+		
+		<div class="item">
+
+			<div class="photo-pic">
+
+				<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230103642341.jpg" alt="">
+
+			</div>
+
+			<div class="photo-title">
+
+				<h3>ss</h3>
+
+			</div>
+
+			<div class="photo-author">
+
+				<h4>摄影：ss</h4>
+
+			</div>
+
+			<span class="photo-line"></span>
+
+		</div>
+
+
+
+		
+		<div class="item">
+
+			<div class="photo-pic">
+
+				<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230102955483.jpg" alt="">
+
+			</div>
+
+			<div class="photo-title">
+
+				<h3>ss</h3>
+
+			</div>
+
+			<div class="photo-author">
+
+				<h4>摄影：ss</h4>
+
+			</div>
+
+			<span class="photo-line"></span>
+
+		</div>
+
+
+
+		
+		<div class="item">
+
+			<div class="photo-pic">
+
+				<img src="http://192.168.1.105/mp2studio/uploadfile/2016/1230/20161230103624417.jpg" alt="">
+
+			</div>
+
+			<div class="photo-title">
+
+				<h3>ss</h3>
+
+			</div>
+
+			<div class="photo-author">
+
+				<h4>摄影：ss</h4>
+
+			</div>
+
+			<span class="photo-line"></span>
+
+		</div>
+
+
+
+		
+
+
+		<div class="photo-more-item">
+
+				
+
+				<p class="text-more">
+
+					<i class="line line-l"></i>
+
+				<a class="more" value="0" href="javascript:;">更多</a>
+
+					<i class="line line-r"></i>
+
+				</p>
+
+				
+
+		</div>
+
+		
+	</div>
+
+	
+
+
+
+	<!-- about body部分 -->
+
+
+
+	<div class="about-body public-container"  style="display: none;">
+
+		<div class="about-info">
+
+			<p class="text-info">
+				
+						MP2工作室于北京成立。<br>
+我们的初衷是：用影像记录时代的声音。<br>
+我们关注音乐、时尚、运动等年轻人感兴趣的内内容领域，以独立的审美，新颖的思维，现金的技术支持和科学的工作流程，完成一部部出色的影像作品。<br>
+几年来这里集结了一批审美相近，有着极强执行力的音乐现场导播，纪录片导演，摄影师，剪辑师等。我们为大家展现明星不为人知的一面，也伴随着众多独立音乐人从Livehouse走向体育场。
+
+
+				
+			
+			</p>
+
+			<span class="about-line"></span>
+
+		</div>
+
+
+
+	
+	
+		<div class="item clearfloat">
+
+			<div class="item-member member-pic">
+
+				
+
+				<div class="circle">
+
+					<img src="http://127.0.0.1/mp2studio/uploadfile/2016/1230/20161230104822837.jpg" alt="">
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item-member member-info">
+
+				<h3>成员一</h3>
+
+				<p>者是一条测试</p>
+
+			</div>
+
+			<span class="about-line"></span>
+
+		</div>
+
+	
+		<div class="item clearfloat">
+
+			<div class="item-member member-pic">
+
+				
+
+				<div class="circle">
+
+					<img src="http://127.0.0.1/mp2studio/uploadfile/2016/1230/20161230104822837.jpg" alt="">
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item-member member-info">
+
+				<h3>成员二</h3>
+
+				<p>者是一条测试</p>
+
+			</div>
+
+			<span class="about-line"></span>
+
+		</div>
+
+	
+		<div class="item clearfloat">
+
+			<div class="item-member member-pic">
+
+				
+
+				<div class="circle">
+
+					<img src="http://127.0.0.1/mp2studio/uploadfile/2016/1230/20161230104522688.jpg" alt="">
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item-member member-info">
+
+				<h3>chengyuansan</h3>
+
+				<p>者是一条测试</p>
+
+			</div>
+
+			<span class="about-line"></span>
+
+		</div>
+
+	
+		<div class="item clearfloat">
+
+			<div class="item-member member-pic">
+
+				
+
+				<div class="circle">
+
+					<img src="http://127.0.0.1/mp2studio/uploadfile/2016/1207/20161207061431462.png" alt="">
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item-member member-info">
+
+				<h3>褚阿月</h3>
+
+				<p>者是一条测试</p>
+
+			</div>
+
+			<span class="about-line"></span>
+
+		</div>
+
+	
+		<div class="item clearfloat">
+
+			<div class="item-member member-pic">
+
+				
+
+				<div class="circle">
+
+					<img src="http://127.0.0.1/mp2studio/uploadfile/2016/1120/20161120041948995.jpg" alt="">
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item-member member-info">
+
+				<h3>成员五</h3>
+
+				<p>者是一条测试</p>
+
+			</div>
+
+			<span class="about-line"></span>
+
+		</div>
+
+	
+		<div class="item clearfloat">
+
+			<div class="item-member member-pic">
+
+				
+
+				<div class="circle">
+
+					<img src="http://127.0.0.1/mp2studio/uploadfile/2016/1230/20161230104430470.jpg" alt="">
+
+				</div>
+
+
+
+			</div>
+
+			<div class="item-member member-info">
+
+				<h3>成员六</h3>
+
+				<p>者是一条测试</p>
+
+			</div>
+
+			<span class="about-line"></span>
+
+		</div>
+
+	
+		
+
+		<div class="about-more-item">
+
+				
+
+				<p class="text-more">
+
+					<i class="line line-l"></i>
+
+				<a class="more" value="0" href="javascript:;">更多</a>
+
+					<i class="line line-r"></i>
+
+				</p>
+
+				
+
+		</div>
+
+		
+	</div>
+
+	<foot>
+
+		
+
+		<script type="text/javascript">
+		//分享的url
+		var shareUrl;
+		//分享的文章标题
+		var shareTitle;
+
+		// 隐藏&&显示相关元素
+
+
+
+	$(document).ready(function(){
+
+
+
+
+
+				//添加更多（视频）
+
+				$(".index-more-item .text-more .more").click(function(){
+
+					var count = $(".index-more-item .text-more .more").attr("value");
+					var bind =$(".bdsharebuttonbox").attr("data-bd-bind");
+					
+				var url = "server.php?type=video&count="+count;
+
+				var data={};
+
+				 $.get(url, data, function(res) {
+
+                    
+
+                    var jsonObj = eval("(" + res + ")");
+
+                   
+
+                   
+
+
+
+                    var html="";
+
+
+
+                    for(var i=0;i<jsonObj.length;i++){
+
+                    			
+
+                    	
+
+                    		html = "<div class=\"item\"> <div class=\"video-pic video-address\"><div id=\"image-cover-"+jsonObj[i].id+"\"><img src=\""+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"play-button\" style=\"cursor: pointer;\" onclick=\"playVideo(this,"+jsonObj[i].id+",'"+jsonObj[i].sid+"')\">						<div class=\"play-button1\"><img src=\"http://192.168.1.105/mp2studio/statics/images/mp2/video-play-border.png\" alt=\"\"></div>	<div class=\"play-button2\"><img src=\"http://192.168.1.105/mp2studio/statics/images/mp2/video-play.png\" alt=\"\"></div>					</div>	<div class=\"video-"+jsonObj[i].id+"\" id=\"video-"+jsonObj[i].id+"\" style=\"width: 100%;max-width: 100%;display:none;\"></div>	</div><div class=\"video-title\"><a href="+jsonObj[i].url+"><h3>"+jsonObj[i].title+"</h3></a>			</div>	<div class=\"video-author\"><h4>制片："+jsonObj[i].poducer+"/导演："+jsonObj[i].director+"/摄影："+jsonObj[i].photographer+"</h4></div><div class=\"video-share clearfloat\"><div id=\"share\"><div class=\"bdsharebuttonbox bdshare-button-style0-24\" data-bd-bind=\""+bind+"\"><a href=\"javascript:;\" class=\"bds_weixin\" data-cmd=\"weixin\" value1=\""+jsonObj[i].url+"\" value2=\""+jsonObj[i].title+"\" title=\"分享到微信\"></a>	<a href=\"#\" class=\"bds_tsina\" value1=\""+jsonObj[i].url+"\" value2=\""+jsonObj[i].title+"\" data-cmd=\"tsina\" title=\"分享到新浪微博\"></a></div></div></div><span class=\"index-line\"></span></div>";
+
+                   	 $(".index-more-item").before(html);
+                   	 _bd_share_main.init();
+
+
+                    }
+                    	 $(".bdsharebuttonbox a").bind("mouseover",function () {
+                shareUrl = $(this).attr("value1");
+                shareTitle = $(this).attr("value2");
+                
+            });
+
+                     //如果查询数据条数小于6条就会隐藏加载更多按钮
+
+                   	 if(jsonObj.length<6){
+
+                   	 	$(".index-more-item .text-more ").css("visibility","hidden");
+
+                   	 }     
+
+				});
+
+				 	count++;
+
+				 	$(".index-more-item .text-more .more").attr("value",count);
+				 	
+
+			});
+
+				//添加更多（图片）
+
+				$(".photo-more-item .text-more .more").click(function(){
+
+					var count = $(".photo-more-item .text-more .more").attr("value");
+
+				var url = "server.php?type=photo&count="+count;
+
+				var data={};
+
+				 $.get(url, data, function(res) {
+
+                    var jsonObj = eval("(" + res + ")");
+
+                    var html="";
+
+                   for(var i=0;i<jsonObj.length;i++){
+
+                   		html="<div class=\"item\"><div class=\"photo-pic\">	<img src=\" "+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"photo-title\"><h3>"+jsonObj[i].title+"</h3></div><div class=\"photo-author\">	<h4>摄影："+jsonObj[i].photographer+"</h4>	</div><span class=\"photo-line\"></span></div>";
+
+                   		$(".photo-more-item").before(html);
+
+                   }
+
+                   //如果查询数据条数小于6条就会隐藏加载更多按钮
+
+                   	 if(jsonObj.length<6){                	 	
+
+                   	 	$(".photo-more-item .text-more ").css("visibility","hidden");
+
+                   	 }
+        
+				});
+				 		count++;
+
+                   	$(".photo-more-item .text-more .more").attr("value",count);
+			});
+
+				//添加更多（成员介绍）
+
+				$(".about-more-item .text-more .more").click(function(){
+
+					var count = $(".about-more-item .text-more .more").attr("value");
+
+				var url = "server.php?type=about&count="+count;
+
+				var data={};
+
+				 $.get(url, data, function(res) {                 
+
+                    var jsonObj = eval("(" + res + ")");
+
+                    var html="";
+
+                  for(var i=0;i<jsonObj.length;i++){
+
+                   	html="<div class=\"item clearfloat\">	<div class=\"item-member member-pic\"><div class=\"circle\">	<img src=\""+jsonObj[i].thumb+"\" alt=\"\"></div></div><div class=\"item-member member-info\"><h3>"+jsonObj[i].name+"</h3><p>"+jsonObj[i].description+"</p></div><span class=\"about-line\"></span></div>";
+
+                   	$(".about-more-item").before(html);
+
+                   }
+
+                   //如果查询数据条数小于6条就会隐藏加载更多按钮
+
+                   	 if(jsonObj.length<6){
+
+                   	 	$(".about-more-item .text-more ").css("visibility","hidden");
+
+                   	 }
+
+				});
+
+			 count++;
+
+				 $(".about-more-item .text-more .more").attr("value",count);
+
+			});
+
+			// 定义三个变量
+
+			var video = $(".index-body");
+			var photo = $(".photo-body");
+			var about = $(".about-body");
+			var video_nav = $(".public-header .nav li .video-a .bar-yellow");
+			var photo_nav = $(".public-header .nav li .photo-a .bar-yellow");
+			var about_nav = $(".public-header .nav li .about-a .bar-yellow");
+
+			$(".video > a").click( function(){
+
+			if(video.css("display")=="block"){
+			}else{
+
+				//控制三个栏目的显示和隐藏
+				video.css("display","block");
+				photo.css("display","none");
+				about.css("display","none");
+				//把隐藏的image-cover显示出来，把显示出来的视频删除
+				$(".video-pic div[id^='image-cover-']").show();
+				$(".video-pic .play-button").show();
+				$(".video-pic div[class^='video-']").html('').hide();
+				//nav滚动条
+				video_nav.css("display","block");
+				photo_nav.css("display","none");
+				about_nav.css("display","none");
+
+			}
+			return false;
+		} );
+
+		$(".photo > a").click( function(){
+
+			if(photo.css("display")=="block"){
+
+			}else{
+
+				//隐藏视频
+
+				$(".video-pic div[class^='video-']").html('').hide();
+
+				photo.css("display","block");
+				video.css("display","none");
+				about.css("display","none");
+				photo_nav.css("display","block");
+				video_nav.css("display","none");
+				about_nav.css("display","none");
+
+			}
+
+			return false;
+		} );
+
+		$(".about > a").click( function(){
+
+			if(about.css("display")=="block"){}else{
+
+				//隐藏视频
+
+				$(".video-pic div[class^='video-']").html('').hide();
+
+				about.css("display","block");
+				photo.css("display","none");
+				video.css("display","none");
+				about_nav.css("display","block");
+				photo_nav.css("display","none");
+				video_nav.css("display","none");
+
+			}
+
+			return false;
+
+		} );
+
+	}
+
+		);
+
+		//绑定所有分享按钮所在A标签的鼠标移入事件，从而获取动态ID
+        $(function () {
+            $(".bdsharebuttonbox a").mouseover(function () {
+                shareUrl = $(this).attr("value1");
+                shareTitle = $(this).attr("value2");
+            });
+
+           
+        });
+
+           // $("body").on("mouseover",".bdsharebuttonbox a",function () {
+           //      shareUrl = $(this).attr("value1");
+           //      shareTitle = $(this).attr("value2");
+           //      alert(shreTitle);
+           //  });
+
+        /* 
+        * 动态设置百度分享URL的函数,具体参数
+        * cmd为分享目标id,此id指的是插件中分析按钮的ID
+        *，我们自己的文章ID要通过全局变量获取
+        * config为当前设置，返回值为更新后的设置。
+        */
+        function SetShareUrl(cmd, config) {            
+            if (shareUrl) {
+                config.bdUrl = shareUrl;    
+            }
+            if (shareTitle){
+
+            	config.bdText = document.title+" "+shareTitle;
+            	config.bdDesc = document.title+" "+shareTitle;
+            }
+            return config;
+        }
+
+         //插件的配置部分，注意要记得设置onBeforeClick事件，主要用于获取动态的文章url
+        window._bd_share_config = {
+            "common": {
+                onBeforeClick:SetShareUrl,bdText:'',"bdSnsKey":{},"bdMini":"2"
+                ,"bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"
+            }, "share": {}
+        };
+
+		//插件的JS加载部分
+
+		with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+
+
+	</script>
+
+
+
+
+
+	</foot>
+
+</body>
+
+</html>
