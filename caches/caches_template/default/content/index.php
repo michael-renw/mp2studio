@@ -77,7 +77,7 @@
 
 	<!-- photo body部分 -->
 
-	<div class="photo-body public-container" style="display: none;">
+	<!-- <div class="photo-body public-container" style="display: none;">
 
 		<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=698f017385124f223d9616d04142e948&action=lists&catid=10&num=6&order=id+DESC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'10','order'=>'id DESC','limit'=>'6',));}?>
 
@@ -115,7 +115,7 @@
 				</p>
 		</div>
 		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
-	</div>
+	</div> -->
 
 	<!-- about body部分 -->
 	<div class="about-body public-container"  style="display: none;">
@@ -134,7 +134,7 @@
 
 		</div>
 
-	<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=8749afcb7fcad4a44599cfcbc9dccda8&action=lists&catid=16&num=6&order=listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','order'=>'listorder ASC','limit'=>'6',));}?>
+	<!-- <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=8749afcb7fcad4a44599cfcbc9dccda8&action=lists&catid=16&num=6&order=listorder+ASC\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','order'=>'listorder ASC','limit'=>'6',));}?>
 
 	<?php $n=1; if(is_array($data)) foreach($data AS $key => $val) { ?>
 
@@ -170,7 +170,7 @@
 				</p>				
 		</div>
 
-		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
+		<?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?> -->
 	</div>
 	<foot>
 		<script type="text/javascript">
@@ -182,6 +182,7 @@
 		// 隐藏&&显示相关元素
 
 	$(document).ready(function(){
+
 
 				//添加更多（视频）
 
@@ -234,42 +235,80 @@
 			});
 
 				//添加更多（图片）
+				// $(".photo-more-item .text-more .more").on("click",function(){
+				// 	var count = $(".photo-more-item .text-more .more").attr("value");
 
-				$(".photo-more-item .text-more .more").click(function(){
+				// var url = "server.php?type=morePhoto&count="+count;
 
-					var count = $(".photo-more-item .text-more .more").attr("value");
+				// var data={};
 
-				var url = "server.php?type=morePhoto&count="+count;
+				//  $.get(url, data, function(res) {
 
-				var data={};
+    //                 var jsonObj = eval("(" + res + ")");
 
-				 $.get(url, data, function(res) {
+    //                 var html="";
 
-                    var jsonObj = eval("(" + res + ")");
+    //                for(var i=0;i<jsonObj.length;i++){
 
-                    var html="";
+    //                		html="<div class=\"item\"><div class=\"photo-pic\">	<img src=\" "+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"photo-title\"><h3>"+jsonObj[i].title+"</h3></div><div class=\"photo-author\">	<h4>摄影："+jsonObj[i].photographer+"</h4>	</div><span class=\"photo-line\"></span></div>";
 
-                   for(var i=0;i<jsonObj.length;i++){
+    //                		$(".photo-more-item").before(html);
 
-                   		html="<div class=\"item\"><div class=\"photo-pic\">	<img src=\" "+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"photo-title\"><h3>"+jsonObj[i].title+"</h3></div><div class=\"photo-author\">	<h4>摄影："+jsonObj[i].photographer+"</h4>	</div><span class=\"photo-line\"></span></div>";
+    //                }
 
-                   		$(".photo-more-item").before(html);
+    //                //如果查询数据条数小于6条就会隐藏加载更多按钮
 
-                   }
+    //                	 if(jsonObj.length<6){                	 	
 
-                   //如果查询数据条数小于6条就会隐藏加载更多按钮
+    //                	 	$(".photo-more-item .text-more ").css("visibility","hidden");
 
-                   	 if(jsonObj.length<6){                	 	
-
-                   	 	$(".photo-more-item .text-more ").css("visibility","hidden");
-
-                   	 }
+    //                	 }
         
-				});
-				 		count++;
+				// });
+				//  		count++;
 
-                   	$(".photo-more-item .text-more .more").attr("value",count);
-			});
+    //                	$(".photo-more-item .text-more .more").attr("value",count);
+				// });
+
+
+
+
+
+			// 	$(".photo-more-item .text-more .more").click(function(){
+
+			// 		var count = $(".photo-more-item .text-more .more").attr("value");
+
+			// 	var url = "server.php?type=morePhoto&count="+count;
+
+			// 	var data={};
+
+			// 	 $.get(url, data, function(res) {
+
+   //                  var jsonObj = eval("(" + res + ")");
+
+   //                  var html="";
+
+   //                 for(var i=0;i<jsonObj.length;i++){
+
+   //                 		html="<div class=\"item\"><div class=\"photo-pic\">	<img src=\" "+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"photo-title\"><h3>"+jsonObj[i].title+"</h3></div><div class=\"photo-author\">	<h4>摄影："+jsonObj[i].photographer+"</h4>	</div><span class=\"photo-line\"></span></div>";
+
+   //                 		$(".photo-more-item").before(html);
+
+   //                 }
+
+   //                 //如果查询数据条数小于6条就会隐藏加载更多按钮
+
+   //                 	 if(jsonObj.length<6){                	 	
+
+   //                 	 	$(".photo-more-item .text-more ").css("visibility","hidden");
+
+   //                 	 }
+        
+			// 	});
+			// 	 		count++;
+
+   //                 	$(".photo-more-item .text-more .more").attr("value",count);
+			// });
 
 				//添加更多（成员介绍）
 
@@ -322,21 +361,21 @@
 
 			$(".video > a").click( function(){
 
-			if(video.css("display")=="block"){
+			if($(".index-body").css("display")=="block"){
 			}else{
 
 				//控制三个栏目的显示和隐藏
-				video.css("display","block");
-				photo.css("display","none");
-				about.css("display","none");
+				$(".index-body").css("display","block");
+				$(".photo-body").css("display","none");
+				$(".about-body").css("display","none");
 				//把隐藏的image-cover显示出来，把显示出来的视频删除
 				$(".video-pic div[id^='image-cover-']").show();
 				$(".video-pic .play-button").show();
 				$(".video-pic div[class^='video-']").html('').hide();
 				//nav滚动条
-				video_nav.css("display","block");
-				photo_nav.css("display","none");
-				about_nav.css("display","none");
+				$(".public-header .nav li .video-a .bar-yellow").css("display","block");
+				$(".public-header .nav li .photo-a .bar-yellow").css("display","none");
+				$(".public-header .nav li .about-a .bar-yellow").css("display","none");
 
 			}
 			return false;
@@ -344,20 +383,86 @@
 
 		$(".photo > a").click( function(){
 
-			if(photo.css("display")=="block"){
+			if($(".photo-body").css("display")=="block"){
 
 			}else{
-
-				//隐藏视频
+					//隐藏视频
 
 				$(".video-pic div[class^='video-']").html('').hide();
 
-				photo.css("display","block");
-				video.css("display","none");
-				about.css("display","none");
-				photo_nav.css("display","block");
-				video_nav.css("display","none");
-				about_nav.css("display","none");
+				$(".photo-body").css("display","block");
+				$(".index-body").css("display","none");
+				$(".about-body").css("display","none");
+				$(".public-header .nav li .photo-a .bar-yellow").css("display","block");
+				$(".public-header .nav li .video-a .bar-yellow").css("display","none");
+				$(".public-header .nav li .about-a .bar-yellow").css("display","none");
+
+				if($(".photo-body").length > 0){
+				
+
+				}else{
+
+					//添加photo页面结构
+					var url = "server.php?type=photo&count=0";
+					var data = {};
+					$.get(url, data, function(res) {
+
+                    var jsonObj = eval("(" + res + ")");
+
+                    var html = " <div class=\"photo-body public-container\" display=\"block\">";
+
+
+                   for(var i=0;i<jsonObj.length;i++){
+
+                   		html+="<div class=\"item\"><div class=\"photo-pic\">	<img src=\" "+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"photo-title\"><h3>"+jsonObj[i].title+"</h3></div><div class=\"photo-author\">	<h4>摄影："+jsonObj[i].photographer+"</h4>	</div><span class=\"photo-line\"></span></div>";
+
+                   		
+
+                   		}
+                   		html += "<div class=\"photo-more-item\"><p class=\"text-more\"><i class=\"line line-l\"></i><a class=\"more\" value=\"0\" href=\"javascript:;\">更多</a><i class=\"line line-r\"></i></p></div></div>";
+                   		
+                   		$(".public-header").after(html);
+                   		$(".photo-more-item .text-more .more").bind("click",function(){
+                   			var count = $(".photo-more-item .text-more .more").attr("value");
+
+				var url = "server.php?type=morePhoto&count="+count;
+
+				var data={};
+
+				 $.get(url, data, function(res) {
+
+                    var jsonObj = eval("(" + res + ")");
+
+                    var html="";
+
+                   for(var i=0;i<jsonObj.length;i++){
+
+                   		html="<div class=\"item\"><div class=\"photo-pic\">	<img src=\" "+jsonObj[i].thumb+"\" alt=\"\"></div><div class=\"photo-title\"><h3>"+jsonObj[i].title+"</h3></div><div class=\"photo-author\">	<h4>摄影："+jsonObj[i].photographer+"</h4>	</div><span class=\"photo-line\"></span></div>";
+
+                   		$(".photo-more-item").before(html);
+
+                   }
+
+                   //如果查询数据条数小于6条就会隐藏加载更多按钮
+
+                   	 if(jsonObj.length<6){                	 	
+
+                   	 	$(".photo-more-item .text-more ").css("visibility","hidden");
+
+                   	 }
+        
+				});
+				 		count++;
+
+                   	$(".photo-more-item .text-more .more").attr("value",count);
+                   		});
+
+                   
+        
+					});
+				}//end else
+
+				
 
 			}
 
@@ -366,18 +471,44 @@
 
 		$(".about > a").click( function(){
 
-			if(about.css("display")=="block"){}else{
-
+			if($(".about-body").css("display")=="block"){}else{
 				//隐藏视频
 
 				$(".video-pic div[class^='video-']").html('').hide();
 
-				about.css("display","block");
-				photo.css("display","none");
-				video.css("display","none");
-				about_nav.css("display","block");
-				photo_nav.css("display","none");
-				video_nav.css("display","none");
+				$(".about-body").css("display","block");
+				$(".photo-body").css("display","none");
+				$(".index-body").css("display","none");
+				$(".public-header .nav li .about-a .bar-yellow").css("display","block");
+				$(".public-header .nav li .photo-a .bar-yellow").css("display","none");
+				$(".public-header .nav li .video-a .bar-yellow").css("display","none");
+				if($(".about-body item").length > 0){
+					
+			}else{
+				//添加about页面结构
+				var url = "server.php?type=about&count=0";
+				var data = {};
+				 $.get(url, data, function(res) {                 
+
+                    var jsonObj = eval("(" + res + ")");
+
+                    var html="";
+
+                  for(var i=0;i<jsonObj.length;i++){
+
+                   	html += "<div class=\"item clearfloat\">	<div class=\"item-member member-pic\"><div class=\"circle\">	<img src=\""+jsonObj[i].thumb+"\" alt=\"\"></div></div><div class=\"item-member member-info\"><h3>"+jsonObj[i].name+"</h3><p>"+jsonObj[i].description+"</p></div><span class=\"about-line\"></span></div>";
+
+
+                   }
+                   html += "<div class=\"about-more-item\">	<p class=\"text-more\"><i class=\"line line-l\"></i><a class=\"more\" value=\"0\" href=\"javascript:;\">更多</a><i class=\"line line-r\"></i></p></div>";
+                   
+                   $(".about-info").after(html);
+
+				});
+
+			}
+
+				
 
 			}
 			return false;

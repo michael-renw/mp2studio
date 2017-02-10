@@ -6,6 +6,12 @@
 	$type = $_GET['type'];
 	$sql="";
 	switch ($type) {
+		case 'photo':
+			$sql = "SELECT * FROM v9_picture order by listorder asc, id desc  LIMIT 0,6";
+			break;
+		case 'about':
+			$sql = "SELECT * FROM v9_member_info order by listorder  asc LIMIT 0,6";
+			break;
 		case 'moreVideo':
 		$sql = "SELECT a.id,a.thumb,a.title,a.description,a.producer,a.director,a.photographer,a.url,a.sid FROM v9_video1 a order by a.listorder asc,a.id desc   LIMIT ".(($count+1)*6).",6 ";
 			break;
