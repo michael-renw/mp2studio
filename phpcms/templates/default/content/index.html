@@ -312,43 +312,43 @@
 
 				//添加更多（成员介绍）
 
-				$(".about-more-item .text-more .more").click(function(){
+			// 	$(".about-more-item .text-more .more").click(function(){
 
-					var count = $(".about-more-item .text-more .more").attr("value");
+			// 		var count = $(".about-more-item .text-more .more").attr("value");
 
-				var url = "server.php?type=moreAbout&count="+count;
+			// 	var url = "server.php?type=moreAbout&count="+count;
 
-				var data={};
+			// 	var data={};
 
-				 $.get(url, data, function(res) {                 
+			// 	 $.get(url, data, function(res) {                 
 
-                    var jsonObj = eval("(" + res + ")");
+   //                  var jsonObj = eval("(" + res + ")");
 
-                    var html="";
+   //                  var html="";
 
-                  for(var i=0;i<jsonObj.length;i++){
+   //                for(var i=0;i<jsonObj.length;i++){
 
-                   	html="<div class=\"item clearfloat\">	<div class=\"item-member member-pic\"><div class=\"circle\">	<img src=\""+jsonObj[i].thumb+"\" alt=\"\"></div></div><div class=\"item-member member-info\"><h3>"+jsonObj[i].name+"</h3><p>"+jsonObj[i].description+"</p></div><span class=\"about-line\"></span></div>";
+   //                 	html="<div class=\"item clearfloat\">	<div class=\"item-member member-pic\"><div class=\"circle\">	<img src=\""+jsonObj[i].thumb+"\" alt=\"\"></div></div><div class=\"item-member member-info\"><h3>"+jsonObj[i].name+"</h3><p>"+jsonObj[i].description+"</p></div><span class=\"about-line\"></span></div>";
 
-                   	$(".about-more-item").before(html);
+   //                 	$(".about-more-item").before(html);
 
-                   }
+   //                 }
 
-                   //如果查询数据条数小于6条就会隐藏加载更多按钮
+   //                 //如果查询数据条数小于6条就会隐藏加载更多按钮
 
-                   	 if(jsonObj.length<6){
+   //                 	 if(jsonObj.length<6){
 
-                   	 	$(".about-more-item .text-more ").css("visibility","hidden");
+   //                 	 	$(".about-more-item .text-more ").css("visibility","hidden");
 
-                   	 }
+   //                 	 }
 
-				});
+			// 	});
 
-			 count++;
+			//  count++;
 
-				 $(".about-more-item .text-more .more").attr("value",count);
+			// 	 $(".about-more-item .text-more .more").attr("value",count);
 
-			});
+			// });
 
 			// 定义三个变量
 
@@ -482,7 +482,7 @@
 				$(".public-header .nav li .about-a .bar-yellow").css("display","block");
 				$(".public-header .nav li .photo-a .bar-yellow").css("display","none");
 				$(".public-header .nav li .video-a .bar-yellow").css("display","none");
-				if($(".about-body item").length > 0){
+				if($(".about-body > .item").length > 0){
 					
 			}else{
 				//添加about页面结构
@@ -503,6 +503,41 @@
                    html += "<div class=\"about-more-item\">	<p class=\"text-more\"><i class=\"line line-l\"></i><a class=\"more\" value=\"0\" href=\"javascript:;\">更多</a><i class=\"line line-r\"></i></p></div>";
                    
                    $(".about-info").after(html);
+                   $(".about-more-item .text-more .more").bind("click",function(){
+                   		var count = $(".about-more-item .text-more .more").attr("value");
+
+				var url = "server.php?type=moreAbout&count="+count;
+
+				var data={};
+
+				 $.get(url, data, function(res) {                 
+
+                    var jsonObj = eval("(" + res + ")");
+
+                    var html="";
+
+                  for(var i=0;i<jsonObj.length;i++){
+
+                   	html="<div class=\"item clearfloat\">	<div class=\"item-member member-pic\"><div class=\"circle\">	<img src=\""+jsonObj[i].thumb+"\" alt=\"\"></div></div><div class=\"item-member member-info\"><h3>"+jsonObj[i].name+"</h3><p>"+jsonObj[i].description+"</p></div><span class=\"about-line\"></span></div>";
+
+                   	$(".about-more-item").before(html);
+
+                   }
+
+                   //如果查询数据条数小于6条就会隐藏加载更多按钮
+
+                   	 if(jsonObj.length<6){
+
+                   	 	$(".about-more-item .text-more ").css("visibility","hidden");
+
+                   	 }
+
+				});
+
+			 count++;
+
+				 $(".about-more-item .text-more .more").attr("value",count);
+                   });
 
 				});
 
